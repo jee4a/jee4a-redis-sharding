@@ -26,7 +26,7 @@ public class UserTest extends BaseJunitTest {
 		UserModel user =new UserModel();
 		user.setId(1);
 		user.setNick("Mr.t");
-		user.setPhone("18673176225");
+		user.setPhone("18888888888");
 		user.setUserName("唐鹏");
 		user.setLastLoginTime(new Date());
 		userManger.addUser(user);
