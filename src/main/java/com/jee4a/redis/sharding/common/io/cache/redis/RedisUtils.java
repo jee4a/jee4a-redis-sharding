@@ -2220,32 +2220,5 @@ public class RedisUtils {
 			returnResource(shardedJedis);
 		}
 	}
-
-	public static void main(String[] args) throws InterruptedException {
-		// String uri = "10.161.144.56:6379,10.161.144.56:6380";
-		String uri = "127.0.0.1:6379";
-		JedisPoolConfig redisConfig = new JedisPoolConfig();
-		redisConfig.setTestOnBorrow(false);
-		redisConfig.setTestOnReturn(false);
-		redisConfig.setTestWhileIdle(false);
-		redisConfig.setMaxIdle(10000);
-		RedisUtils redisUtils = new RedisUtils(uri, redisConfig);
-		for (int i = 0; i < 4; i++) {
-			long retry = redisUtils.retry("111", 3, 1000);
-			System.out.println(retry);
-		}
-
-		// try {
-		// Set<String> keys =
-		// redisUtils.getJedisByShardKey("1").keys("ORDER_SRC_*");
-		// for (String string : keys) {
-		// redisUtils.del(string);
-		// }
-		// boolean canBeSubmit = redisUtils.canBeSubmit("1", "1", 20);
-		// System.out.println(canBeSubmit);
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// }
-	}
-
+	 
 }
