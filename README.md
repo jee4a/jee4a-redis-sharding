@@ -1,3 +1,3 @@
 # jee4a-redis-sharding
 
-简单客户端sharding示例
+redis简单客户端sharding示例
