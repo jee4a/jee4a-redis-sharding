@@ -1,5 +1,5 @@
 # jee4a-redis-sharding
 
-redis-sharding示例
+redis多实例部署  &  sharding示例
 
 部署文档：dosc/
